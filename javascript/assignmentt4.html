@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flipkart-style Header</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      width: 100%;
+      /* You can set background to Flipkart’s colours or your own */
+      background-color: #f1f1f2; /* Flipkart blue */
+      color: white;
+    }
+
+    /* Top thin strip */
+    .top-strip {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 5px 20px;
+      font-size: 13px;
+      background-color: #bdd1ed; /* slightly darker maybe */
+    }
+    .top-strip a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Main header row */
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo img {
+      width: 160px;
+      height: auto;
+    }
+
+    .search-bar {
+      flex: 1; /* takes remaining space between logo and icons */
+      margin: 0 20px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 2px;
+      /* you may want to add box shadow or border */
+      font-size: 16px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+    }
+    .header-icons div {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .nav-row {
+      display: flex;
+      padding: 10px 20px;
+      background-color: #59677d; 
+    }
+    .nav-row .nav-item {
+      margin-right: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .nav-row .nav-item:hover {
+      /* optional hover effect */
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+
+    <!-- Row 1: top strip -->
+    <div class="top-strip">
+      <a href="#">Login</a>
+      <a href="#">My Profile</a>
+      <a href="#">Orders</a>
+      <a href="#">Wishlist</a>
+      <a href="#">Cart</a>
+      <!-- etc -->
+    </div>
+
+    <!-- Row 2: main header -->
+    <div class="main-header">
+      <div class="logo">
+        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="Flipkart Logo">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more">
+      </div>
+      <div class="header-icons">
+        <div>Profile</div>
+        <div>Cart</div>
+        <!-- other icons / links -->
+      </div>
+    </div>
+
+    <!-- Row 3: navigation -->
+    <nav class="nav-row">
+      <div class="nav-item">Electronics</div>
+      <div class="nav-item">TVs & Appliances</div>
+      <div class="nav-item">Fashion</div>
+      <div class="nav-item">Grocery</div>
+      <div class="nav-item">Home & Furniture</div>
+      <div class="nav-item">Beauty</div>
+      <!-- etc -->
+    </nav>
+
+  </header>
+
+</body>
+</html>
